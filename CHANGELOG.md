@@ -4,6 +4,7 @@
 
 - Fix response headers never appearing on Linux: opening the popup made Chrome report “no window focused”, which cleared the selection and its captured headers. That signal is now acted on only once the popup has closed.
 - Tests and the batch scanner send the popup's window id with each scan, as the popup does.
+- Add `npm run test:compat` for older Chrome builds; passes on Chrome 120.0.6099.109, the manifest minimum.
 
 ## 0.2.0 — 2026-10-04
 

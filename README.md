@@ -233,6 +233,8 @@ npm run test:browser
 npm run test:batch
 ```
 
+To check an older Chrome, such as the minimum version 120, download that build (for example from [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/)) and run `CHROME_PATH="/path/to/chrome" npm run test:compat`. Old Chrome lacks the debugging commands that click the toolbar icon, so this check loads a temporary copy of the extension that is granted the local fixture host; it covers the scan, header capture, file check and rendering, not the click-to-grant step.
+
 Both browser commands use disposable profiles and local fixtures. Tests include real activeTab grants, focus cancellation, header capture, frame budgets, hash routes, banner parsing and incomplete-coverage warnings. Set `CHROME_PATH` to a Chrome executable to test system Chrome, or `PLAYWRIGHT_MODULE` to a different development installation; omit both to use the locked tooling and its bundled Chromium. These tools are outside `extension/`; installing the extension and running the local demo still need no npm dependencies.
 
 ## Scan many pages at once
