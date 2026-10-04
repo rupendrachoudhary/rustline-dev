@@ -7,7 +7,7 @@
 3. Type `chrome://extensions` into Chrome's address bar.
 4. Turn on **Developer mode** in the top-right corner.
 5. Click **Load unpacked**. Inside the extracted `rustline-dev` folder, select **extension**. This is the folder containing `manifest.json`; do not select its parent.
-6. Confirm rustline.dev version **0.2.0** appears and is enabled.
+6. Confirm rustline.dev version **0.2.1** appears and is enabled.
 7. Open Chrome's puzzle-piece menu and pin rustline.dev to the toolbar.
 
 There is no build step or dependency installation. Chrome documents this process at https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked.

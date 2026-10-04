@@ -211,9 +211,18 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 chrome.tabs.onActivated.addListener(info => {
   void serial(async () => { const state = await readSelection(); if (state && (state.tabId !== info.tabId || state.windowId !== info.windowId)) await writeSelection(null); }).catch(() => {});
 });
-chrome.windows.onFocusChanged.addListener(windowId => {
+// On Linux, Chrome reports WINDOW_ID_NONE when the extension's own popup takes
+// focus, which is not the user leaving. Decide a moment later: a popup that is
+// still open means the user is still here; leaving Chrome closes the popup.
+const FOCUS_SETTLE_MS = 300;
+async function popupOpen() { return (await chrome.runtime.getContexts({ contextTypes: ['POPUP'] })).length > 0; }
+function focusMoved(windowId) {
   for (const ticket of tickets) if (ticket.windowId !== windowId) ticket.cancelled = true;
   void serial(async () => { const state = await readSelection(); if (state && state.windowId !== windowId) await writeSelection(null); }).catch(() => {});
+}
+chrome.windows.onFocusChanged.addListener(windowId => {
+  if (windowId !== chrome.windows.WINDOW_ID_NONE) { focusMoved(windowId); return; }
+  setTimeout(() => { popupOpen().then(open => { if (!open) focusMoved(windowId); }, () => focusMoved(windowId)); }, FOCUS_SETTLE_MS);
 });
 chrome.tabs.onRemoved.addListener(tabId => {
   void serial(async () => { if ((await readSelection())?.tabId === tabId) await writeSelection(null); }).catch(() => {});

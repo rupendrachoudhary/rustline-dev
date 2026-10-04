@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 — 2026-10-04
+
+- Fix response headers never appearing on Linux: opening the popup made Chrome report “no window focused”, which cleared the selection and its captured headers. That signal is now acted on only once the popup has closed.
+- Tests and the batch scanner send the popup's window id with each scan, as the popup does.
+
 ## 0.2.0 — 2026-10-04
 
 - Add an opt-in file check to the popup: reads this site’s own (same-origin) script files and matches library licence banners, so self-hosted and bundled copies can be found. Never runs on its own; other origins are not requested; no new permission.
