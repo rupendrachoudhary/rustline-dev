@@ -1,0 +1,4889 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-22T14:17:50.217Z",
+  "source": {
+    "name": "Retire.js",
+    "url": "https://raw.githubusercontent.com/RetireJS/retire.js/master/repository/jsrepository-v4.json",
+    "sha256": "eb0289a2b0cb7b1b61c39e30dc587db49d1901977eaabfa9c6dd28606ce30fd5",
+    "license": "Apache-2.0",
+    "notice": "Filtered and normalized by rustline.dev; explanations added. Upstream advisory identifiers, ranges and references retained."
+  },
+  "libraries": {
+    "jquery": {
+      "name": "jQuery",
+      "npm": "jquery",
+      "upstreamKey": "jquery",
+      "coverage": "retire",
+      "latest": "4.0.0",
+      "releaseSource": "https://registry.npmjs.org/jquery/latest",
+      "advisories": [
+        {
+          "id": "GHSA-579v-mp3v-rrw5",
+          "aliases": [
+            "CVE-2011-4969",
+            "GHSA-579v-mp3v-rrw5"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS with location.hash",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://research.insecurelabs.org/jquery/test/",
+            "https://bugs.jquery.com/ticket/9521",
+            "https://nvd.nist.gov/vuln/detail/CVE-2011-4969"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2pqj-h3vj-pqgw",
+          "aliases": [
+            "CVE-2012-6708",
+            "GHSA-2pqj-h3vj-pqgw"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Selector interpreted as HTML",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-64",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://bugs.jquery.com/ticket/11290",
+            "http://research.insecurelabs.org/jquery/test/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2012-6708"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.9.0b1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-q4m3-2j7h-f7xw",
+          "aliases": [
+            "CVE-2020-7656",
+            "GHSA-q4m3-2j7h-f7xw"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Versions of jQuery prior to 1.9.0 are vulnerable to Cross-Site Scripting (XSS). The load method fails to recognize and strip script tags containing whitespace in the closing tag (e.g. </script >), allowing enclosed script logic to execute and enabling attackers to run arbitrary JavaScript in a victim's browser.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-q4m3-2j7h-f7xw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7656",
+            "https://research.insecurelabs.org/jquery/test/"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.2.1",
+              "fixed": "1.9.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-rmxg-73gg-4p98",
+          "aliases": [
+            "CVE-2015-9251",
+            "GHSA-rmxg-73gg-4p98"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "3rd party CORS request may execute",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/",
+            "http://research.insecurelabs.org/jquery/test/",
+            "https://github.com/advisories/GHSA-rmxg-73gg-4p98",
+            "https://github.com/jquery/jquery/issues/2432",
+            "https://nvd.nist.gov/vuln/detail/CVE-2015-9251"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.4.0",
+              "fixed": "1.12.0"
+            },
+            {
+              "introduced": "1.12.3",
+              "fixed": "3.0.0-beta1"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-jquery-85057ed7a245",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "parseHTML() executes scripts in event handlers",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://research.insecurelabs.org/jquery/test/",
+            "https://bugs.jquery.com/ticket/11974"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.8.0",
+              "fixed": "2.2.0"
+            },
+            {
+              "introduced": "2.2.2",
+              "fixed": "3.0.0"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-jquery-73",
+          "aliases": [],
+          "kind": "maintenance",
+          "severity": "low",
+          "summary": "jQuery 1.x and 2.x are End-of-Life and no longer receiving security updates",
+          "why": "This release no longer receives security fixes. Future problems may remain unpatched.",
+          "cwe": [
+            "CWE-1104"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/jquery/jquery.com/issues/162"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.999.999"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mhpp-875w-9cpv",
+          "aliases": [
+            "CVE-2016-10707",
+            "GHSA-mhpp-875w-9cpv"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Denial of Service in jquery",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400",
+            "CWE-674"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-10707"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.0.0-rc.1",
+              "fixed": "3.0.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-6c3j-c64m-qhgq",
+          "aliases": [
+            "CVE-2019-11358",
+            "GHSA-6c3j-c64m-qhgq"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/",
+            "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-11358"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.1.4",
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-jpcq-cgw6-v4j6",
+          "aliases": [
+            "CVE-2020-11023",
+            "GHSA-jpcq-cgw6-v4j6"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "passing HTML containing <option> elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.3",
+              "fixed": "3.5.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-gxr4-xjj5-5px2",
+          "aliases": [
+            "CVE-2020-11022",
+            "GHSA-gxr4-xjj5-5px2"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Regex in its jQuery.htmlPrefilter sometimes may introduce XSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.12.0",
+              "fixed": "3.5.0"
+            }
+          ]
+        }
+      ]
+    },
+    "angularjs": {
+      "name": "AngularJS",
+      "npm": "angular",
+      "upstreamKey": "angularjs",
+      "coverage": "retire",
+      "latest": "1.8.3",
+      "releaseSource": "https://registry.npmjs.org/angular/latest",
+      "advisories": [
+        {
+          "id": "RETIRE-angularjs-50",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "The attribute usemap can be used as a security exploit",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md#1230-patronal-resurrection-2016-07-21"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.2.30"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-r5fx-8r73-v86c",
+          "aliases": [
+            "CVE-2019-14863",
+            "GHSA-r5fx-8r73-v86c"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS through xlink:href attributes",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-r5fx-8r73-v86c",
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md#150-beta1-dense-dispersion-2015-09-29"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.5.0-beta.1"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-49",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "The attribute usemap can be used as a security exploit",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md#1230-patronal-resurrection-2016-07-21"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.0",
+              "fixed": "1.5.0-rc2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-28hp-fgcr-2r4h",
+          "aliases": [
+            "GHSA-28hp-fgcr-2r4h"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Cross-Site Scripting via JSONP",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-28hp-fgcr-2r4h"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.0"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-52",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOS in $sanitize",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md",
+            "https://github.com/angular/angular.js/pull/15699"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.3"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-51",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Universal CSP bypass via add-on in Firefox",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-942"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://pastebin.com/raw/kGrdaypP",
+            "https://github.com/mozilla/addons-linter/issues/1000#issuecomment-282083435"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.3"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-53",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "XSS in $sanitize in Safari/Firefox",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/commit/8f31f1ff43b673a24f84422d5c13d6312b2c4d94"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.5"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-48",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "XSS through SVG if enableSvg is set",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md#169-fiery-basilisk-2018-02-02",
+            "https://vulnerabledoma.in/ngSanitize1.6.8_bypass.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.5.0",
+              "fixed": "1.6.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-89mq-4x47-5v83",
+          "aliases": [
+            "CVE-2019-10768",
+            "GHSA-89mq-4x47-5v83"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype pollution",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-20",
+            "CWE-915"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/angular/angular.js/blob/master/CHANGELOG.md#179-pollution-eradication-2019-11-19",
+            "https://github.com/angular/angular.js/commit/726f49dcf6c23106ddaf5cfd5e2e592841db743a"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-5cp4-xmrw-59wf",
+          "aliases": [
+            "GHSA-5cp4-xmrw-59wf"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS via JQLite DOM manipulation functions in AngularJS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-5cp4-xmrw-59wf"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mhp6-pxh8-r675",
+          "aliases": [
+            "CVE-2020-7676",
+            "GHSA-mhp6-pxh8-r675"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS may be triggered in AngularJS applications that sanitize user-controlled HTML snippets before passing them to JQLite methods like JQLite.prepend, JQLite.after, JQLite.append, JQLite.replaceWith, JQLite.append, new JQLite and angular.element.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-5cp4-xmrw-59wf",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7676"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2qqx-w9hr-q5gx",
+          "aliases": [
+            "CVE-2023-26117",
+            "GHSA-2qqx-w9hr-q5gx"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "angular vulnerable to regular expression denial of service via the $resource service",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-2qqx-w9hr-q5gx"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2vrf-hf26-jrp5",
+          "aliases": [
+            "CVE-2023-26116",
+            "GHSA-2vrf-hf26-jrp5"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "angular vulnerable to regular expression denial of service via the angular.copy() utility",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-2vrf-hf26-jrp5"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-prc3-vjfx-vhm9",
+          "aliases": [
+            "CVE-2022-25869",
+            "GHSA-prc3-vjfx-vhm9"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Angular (deprecated package) Cross-site Scripting",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-prc3-vjfx-vhm9"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-qwqh-hm9m-p5hr",
+          "aliases": [
+            "CVE-2023-26118",
+            "GHSA-qwqh-hm9m-p5hr"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "angular vulnerable to regular expression denial of service via the <input type=\"url\"> element",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-qwqh-hm9m-p5hr"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-j58c-ww9w-pwp5",
+          "aliases": [
+            "CVE-2025-0716",
+            "GHSA-j58c-ww9w-pwp5"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "AngularJS improperly sanitizes SVG elements",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-791"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-j58c-ww9w-pwp5",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-0716",
+            "https://codepen.io/herodevs/pen/qEWQmpd/a86a0d29310e12c7a3756768e6c7b915",
+            "https://github.com/angular/angular.js",
+            "https://www.herodevs.com/vulnerability-directory/cve-2025-0716"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mqm9-c95h-x2p6",
+          "aliases": [
+            "CVE-2024-8373",
+            "GHSA-mqm9-c95h-x2p6"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "AngularJS allows attackers to bypass common image source restrictions",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-791"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-mqm9-c95h-x2p6",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8373",
+            "https://codepen.io/herodevs/full/bGPQgMp/8da9ce87e99403ee13a295c305ebfa0b",
+            "https://github.com/angular/angular.js",
+            "https://www.herodevs.com/vulnerability-directory/cve-2024-8373"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-7x27-g8rg-x87w",
+          "aliases": [
+            "CVE-2026-11998",
+            "GHSA-7x27-g8rg-x87w"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Angular's deprecated package has a Cross-Site Scripting issue",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79",
+            "CWE-791"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://access.redhat.com/security/cve/CVE-2026-11998",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2492579",
+            "https://codepen.io/herodevs/pen/JobQdmz/5b3896f56fab66f20cd25e698cf3faa8",
+            "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-11998.json",
+            "https://www.herodevs.com/vulnerability-directory/cve-2026-11998",
+            "https://www.herodevs.com/vulnerability-directory/cve-2026-11998?nes-for-angularjs"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.2.0-rc.3",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4w4v-5hc9-xrr2",
+          "aliases": [
+            "CVE-2024-21490",
+            "GHSA-4w4v-5hc9-xrr2"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "angular vulnerable to super-linear runtime due to backtracking",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-4w4v-5hc9-xrr2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-21490",
+            "https://github.com/angular/angular.js",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-6241746",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-6241747",
+            "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-6091113",
+            "https://stackblitz.com/edit/angularjs-vulnerability-ng-srcset-redos"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.0",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-m9gf-397r-hwpg",
+          "aliases": [
+            "CVE-2024-8372",
+            "GHSA-m9gf-397r-hwpg"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "AngularJS allows attackers to bypass common image source restrictions",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-1289"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-m9gf-397r-hwpg",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8372",
+            "https://codepen.io/herodevs/full/xxoQRNL/0072e627abe03e9cda373bc75b4c1017",
+            "https://github.com/angular/angular.js",
+            "https://www.herodevs.com/vulnerability-directory/cve-2024-8372"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.0-rc.4",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4p4w-6hg8-63wx",
+          "aliases": [
+            "CVE-2025-2336",
+            "GHSA-4p4w-6hg8-63wx"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "AngularJS Incomplete Filtering of Special Elements vulnerability",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-791"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-4p4w-6hg8-63wx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-2336",
+            "https://codepen.io/herodevs/pen/bNGYaXx/412a3a4218387479898912f60c269c6c",
+            "https://github.com/angular/angular.js",
+            "https://www.herodevs.com/vulnerability-directory/cve-2025-2336"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.1",
+              "fixed": "1.8.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-hfff-63hg-f47j",
+          "aliases": [
+            "CVE-2025-4690",
+            "GHSA-hfff-63hg-f47j"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "AngularJS Regular expression Denial of Service (ReDoS)",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-hfff-63hg-f47j",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-4690",
+            "https://codepen.io/herodevs/pen/RNNEPzP/751b91eab7730dff277523f3d50e4b77",
+            "https://github.com/angular/angular.js",
+            "https://www.herodevs.com/vulnerability-directory/cve-2025-4690"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "1.9.9"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-angularjs-54",
+          "aliases": [],
+          "kind": "maintenance",
+          "severity": "low",
+          "summary": "End-of-Life: Long term support for AngularJS has been discontinued as of December 31, 2021",
+          "why": "This release no longer receives security fixes. Future problems may remain unpatched.",
+          "cwe": [
+            "CWE-1104"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://docs.angularjs.org/misc/version-support-status"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.999"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-m2h2-264f-f486",
+          "aliases": [
+            "CVE-2022-25844",
+            "GHSA-m2h2-264f-f486"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "angular vulnerable to regular expression denial of service (ReDoS)",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333",
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-m2h2-264f-f486"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.7.0",
+              "fixed": "999.999.999"
+            }
+          ]
+        }
+      ]
+    },
+    "react": {
+      "name": "React",
+      "npm": "react",
+      "upstreamKey": "react",
+      "coverage": "retire",
+      "latest": "19.3.0",
+      "releaseSource": "https://registry.npmjs.org/react/latest",
+      "advisories": [
+        {
+          "id": "GHSA-g53w-52xc-2j85",
+          "aliases": [
+            "CVE-2013-7035",
+            "GHSA-g53w-52xc-2j85"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "potential XSS vulnerability can arise when using user data as a key",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://facebook.github.io/react/blog/2013/12/18/react-v0.5.2-v0.4.2.html",
+            "https://github.com/advisories/GHSA-g53w-52xc-2j85"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.4.0",
+              "fixed": "0.4.2"
+            },
+            {
+              "introduced": "0.5.0",
+              "fixed": "0.5.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-hg79-j56m-fxgv",
+          "aliases": [
+            "GHSA-hg79-j56m-fxgv"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": " including untrusted objects as React children can result in an XSS security vulnerability",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://danlec.com/blog/xss-via-a-spoofed-react-element",
+            "https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.0.1",
+              "fixed": "0.14.0"
+            }
+          ]
+        },
+        {
+          "id": "CVE-2018-6341",
+          "aliases": [
+            "CVE-2018-6341"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "potential XSS vulnerability when the attacker controls an attribute name",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/facebook/react/blob/master/CHANGELOG.md",
+            "https://reactjs.org/blog/2018/08/01/react-v-16-4-2.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "16.0.0",
+              "fixed": "16.0.1"
+            },
+            {
+              "introduced": "16.1.0",
+              "fixed": "16.1.2"
+            },
+            {
+              "introduced": "16.2.0",
+              "fixed": "16.2.1"
+            },
+            {
+              "introduced": "16.3.0",
+              "fixed": "16.3.3"
+            },
+            {
+              "introduced": "16.4.0",
+              "fixed": "16.4.2"
+            }
+          ]
+        }
+      ]
+    },
+    "react-dom": {
+      "name": "React DOM",
+      "npm": "react-dom",
+      "upstreamKey": "react-dom",
+      "coverage": "retire",
+      "latest": "19.3.0",
+      "releaseSource": "https://registry.npmjs.org/react-dom/latest",
+      "advisories": [
+        {
+          "id": "GHSA-mvjj-gqq2-p4hw",
+          "aliases": [
+            "CVE-2018-6341",
+            "GHSA-mvjj-gqq2-p4hw"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Affected versions of `react-dom` are vulnerable to Cross-Site Scripting (XSS). The package fails to validate attribute names in HTML tags which may lead to Cross-Site Scripting in specific scenarios",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-mvjj-gqq2-p4hw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-6341",
+            "https://reactjs.org/blog/2018/08/01/react-v-16-4-2.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "16.0.0",
+              "fixed": "16.0.1"
+            },
+            {
+              "introduced": "16.1.0",
+              "fixed": "16.1.2"
+            },
+            {
+              "introduced": "16.2.0",
+              "fixed": "16.2.1"
+            },
+            {
+              "introduced": "16.3.0",
+              "fixed": "16.3.3"
+            },
+            {
+              "introduced": "16.4.0",
+              "fixed": "16.4.2"
+            }
+          ]
+        }
+      ]
+    },
+    "vue": {
+      "name": "Vue",
+      "npm": "vue",
+      "upstreamKey": "vue",
+      "coverage": "retire",
+      "latest": "3.5.43",
+      "releaseSource": "https://registry.npmjs.org/vue/latest",
+      "advisories": [
+        {
+          "id": "RETIRE-vue-12",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "possible xss vector",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/vuejs/vue/releases/tag/v2.4.3"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.4.3"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-vue-11",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "potential xss in ssr when using v-bind",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/vuejs/vue/releases/tag/v2.5.17"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.5.17"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-vue-10",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Bump vue-server-renderer's dependency of serialize-javascript to 2.1.2",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/vuejs/vue/releases/tag/v2.6.11"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.6.11"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-5j4c-8p2g-v4jx",
+          "aliases": [
+            "CVE-2024-9506",
+            "GHSA-5j4c-8p2g-v4jx"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-5j4c-8p2g-v4jx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-9506",
+            "https://github.com/vuejs/core",
+            "https://www.herodevs.com/vulnerability-directory/cve-2024-9506"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.0.0-alpha.1",
+              "fixed": "3.0.0-alpha.0"
+            }
+          ]
+        }
+      ]
+    },
+    "lodash": {
+      "name": "Lodash",
+      "npm": "lodash",
+      "upstreamKey": "lodash",
+      "coverage": "retire",
+      "latest": "4.18.1",
+      "releaseSource": "https://registry.npmjs.org/lodash/latest",
+      "advisories": [
+        {
+          "id": "GHSA-fvqr-27wr-82fm",
+          "aliases": [
+            "CVE-2018-3721",
+            "GHSA-fvqr-27wr-82fm"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Prototype Pollution in lodash",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-471",
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-fvqr-27wr-82fm",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-3721",
+            "https://github.com/lodash/lodash/commit/d8e069cc3410082e44eb18fcf8e7f3d08ebe1d4a",
+            "https://hackerone.com/reports/310443",
+            "https://security.netapp.com/advisory/ntap-20190919-0004/",
+            "https://www.npmjs.com/advisories/577"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.17.5"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4xc9-xhrj-v574",
+          "aliases": [
+            "CVE-2018-16487",
+            "GHSA-4xc9-xhrj-v574"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype Pollution in lodash",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-4xc9-xhrj-v574",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-16487",
+            "https://github.com/lodash/lodash/commit/90e6199a161b6445b01454517b40ef65ebecd2ad",
+            "https://hackerone.com/reports/380873",
+            "https://security.netapp.com/advisory/ntap-20190919-0004/",
+            "https://www.npmjs.com/advisories/782"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.17.11"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-x5rq-j2xg-h7qm",
+          "aliases": [
+            "CVE-2019-1010266",
+            "GHSA-x5rq-j2xg-h7qm"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-x5rq-j2xg-h7qm",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-1010266",
+            "https://github.com/lodash/lodash/issues/3359",
+            "https://github.com/lodash/lodash/commit/5c08f18d365b64063bfbfa686cbb97cdd6267347",
+            "https://github.com/lodash/lodash/wiki/Changelog",
+            "https://security.netapp.com/advisory/ntap-20190919-0004/",
+            "https://snyk.io/vuln/SNYK-JS-LODASH-73639"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.7.0",
+              "fixed": "4.17.11"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-jf85-cpcp-j695",
+          "aliases": [
+            "CVE-2019-10744",
+            "GHSA-jf85-cpcp-j695"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype Pollution in lodash",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-20"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-jf85-cpcp-j695",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-10744",
+            "https://github.com/lodash/lodash/pull/4336",
+            "https://access.redhat.com/errata/RHSA-2019:3024",
+            "https://security.netapp.com/advisory/ntap-20191004-0005/",
+            "https://snyk.io/vuln/SNYK-JS-LODASH-450202",
+            "https://support.f5.com/csp/article/K47105354?utm_source=f5support&amp;utm_medium=RSS",
+            "https://www.npmjs.com/advisories/1065",
+            "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "https://www.oracle.com/security-alerts/cpuoct2020.html"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.17.12"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-p6mc-m468-83gw",
+          "aliases": [
+            "CVE-2020-8203",
+            "GHSA-p6mc-m468-83gw"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype Pollution in lodash",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-p6mc-m468-83gw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-8203",
+            "https://github.com/lodash/lodash/issues/4744",
+            "https://github.com/lodash/lodash/issues/4874",
+            "https://github.com/github/advisory-database/pull/2884",
+            "https://github.com/lodash/lodash/commit/c84fe82760fb2d3e03a63379b297a1cc1a2fce12",
+            "https://hackerone.com/reports/712065",
+            "https://hackerone.com/reports/864701",
+            "https://github.com/lodash/lodash",
+            "https://github.com/lodash/lodash/wiki/Changelog#v41719",
+            "https://web.archive.org/web/20210914001339/https://github.com/lodash/lodash/issues/4744"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.7.0",
+              "fixed": "4.17.19"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-35jh-r3h4-6jhm",
+          "aliases": [
+            "CVE-2021-23337",
+            "CVE-2026-4800",
+            "GHSA-35jh-r3h4-6jhm"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Command Injection in lodash",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-77",
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-23337",
+            "https://github.com/lodash/lodash/commit/3469357cff396a26c363f8c1b5a91dde28ba4b1c",
+            "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
+            "https://github.com/lodash/lodash",
+            "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js#L14851",
+            "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851",
+            "https://security.netapp.com/advisory/ntap-20210312-0006/",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929",
+            "https://snyk.io/vuln/SNYK-JS-LODASH-1040724",
+            "https://www.oracle.com//security-alerts/cpujul2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.17.21"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-29mw-wpgm-hmr9",
+          "aliases": [
+            "CVE-2020-28500",
+            "GHSA-29mw-wpgm-hmr9"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333",
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-29mw-wpgm-hmr9",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-28500",
+            "https://github.com/lodash/lodash/pull/5065",
+            "https://github.com/lodash/lodash/pull/5065/commits/02906b8191d3c100c193fe6f7b27d1c40f200bb7",
+            "https://github.com/lodash/lodash/commit/c4847ebe7d14540bb28a8b932a9ce1b9ecbfee1a",
+            "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
+            "https://github.com/lodash/lodash",
+            "https://github.com/lodash/lodash/blob/npm/trimEnd.js%23L8",
+            "https://security.netapp.com/advisory/ntap-20210312-0006/",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074896",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074894",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074892",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074895",
+            "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074893",
+            "https://snyk.io/vuln/SNYK-JS-LODASH-1018905",
+            "https://www.oracle.com//security-alerts/cpujul2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.17.21"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xxjr-mmjv-4gpg",
+          "aliases": [
+            "CVE-2025-13465",
+            "CVE-2026-2950",
+            "GHSA-xxjr-mmjv-4gpg"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution via the _.unset and _.omit functions. An attacker can pass crafted paths to delete methods from global prototypes such as Object.prototype, though the issue only permits deletion and not overwriting of properties.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg",
+            "https://github.com/lodash/lodash/commit/edadd452146f7e4bad4ea684e955708931d84d81"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.17.23"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-f23m-r3pf-42rh",
+          "aliases": [
+            "CVE-2025-13465",
+            "CVE-2026-2950",
+            "GHSA-f23m-r3pf-42rh"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Lodash 4.17.23 and earlier are vulnerable to a prototype pollution bypass in _.unset and _.omit. The fix for CVE-2025-13465 only guards against string key members, so attackers can bypass it by passing array-wrapped path segments to delete properties from built-in prototypes including Object.prototype, Number.prototype, and String.prototype.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh",
+            "https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "4.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-r5fr-rjxr-66jc",
+          "aliases": [
+            "CVE-2021-23337",
+            "CVE-2026-4800",
+            "GHSA-r5fr-rjxr-66jc"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Lodash _.template is vulnerable to code injection via unsanitized options.imports key names. Untrusted key names are passed to the Function() constructor sink without validation, and the use of assignInWith (which enumerates inherited properties) also means that pre-existing prototype pollution on Object.prototype can flow into the Function() sink and execute arbitrary code at template compilation time.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/lodash/lodash/security/advisories/GHSA-r5fr-rjxr-66jc",
+            "https://github.com/lodash/lodash/commit/3469357cff396a26c363f8c1b5a91dde28ba4b1c",
+            "https://cna.openjsf.org/security-advisories.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.18.0"
+            }
+          ]
+        }
+      ]
+    },
+    "underscore": {
+      "name": "Underscore",
+      "npm": "underscore",
+      "upstreamKey": "underscore.js",
+      "coverage": "retire",
+      "latest": "1.13.8",
+      "releaseSource": "https://registry.npmjs.org/underscore/latest",
+      "advisories": [
+        {
+          "id": "GHSA-cf4h-3jhx-xvhq",
+          "aliases": [
+            "CVE-2021-23358",
+            "GHSA-cf4h-3jhx-xvhq"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": " vulnerable to Arbitrary Code Injection via the template function",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-23358"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.2",
+              "fixed": "1.12.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-qpx9-hpmf-5gmw",
+          "aliases": [
+            "CVE-2026-27601",
+            "GHSA-qpx9-hpmf-5gmw"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Underscore.js versions up to 1.13.7 are vulnerable to Denial of Service via stack overflow. The _.flatten and _.isEqual functions use unbounded recursion without a depth limit, so deeply nested structures sourced from untrusted input (e.g. via JSON.parse) can exhaust the call stack and crash the process.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-674",
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw",
+            "https://github.com/jashkenas/underscore/issues/3011",
+            "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
+            "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
+            "https://underscorejs.org/#1.13.8",
+            "https://underscorejs.org/#flatten",
+            "https://underscorejs.org/#isEqual"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "1.13.8"
+            }
+          ]
+        }
+      ]
+    },
+    "moment": {
+      "name": "Moment",
+      "npm": "moment",
+      "upstreamKey": "moment.js",
+      "coverage": "retire",
+      "latest": "2.31.0",
+      "releaseSource": "https://registry.npmjs.org/moment/latest",
+      "advisories": [
+        {
+          "id": "GHSA-87vv-r9j6-g5qv",
+          "aliases": [
+            "CVE-2016-4055",
+            "GHSA-87vv-r9j6-g5qv"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "reDOS - regular expression denial of service",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/moment/moment/issues/2936"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.11.2"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-moment-22",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Regular Expression Denial of Service (ReDoS)",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://security.snyk.io/vuln/npm:moment:20161019"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.15.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-446m-mv8f-q348",
+          "aliases": [
+            "CVE-2017-18214",
+            "GHSA-446m-mv8f-q348"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Regular Expression Denial of Service (ReDoS)",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333",
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18214",
+            "https://github.com/moment/moment/issues/4163",
+            "https://security.snyk.io/vuln/npm:moment:20170905"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.19.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-8hfj-j24r-96c4",
+          "aliases": [
+            "CVE-2022-24785",
+            "GHSA-8hfj-j24r-96c4"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "This vulnerability impacts npm (server) users of moment.js, especially if user provided locale string, eg fr is directly used to switch moment locale.",
+          "why": "In affected uses, crafted paths may access files or locations outside the intended directory.",
+          "cwe": [
+            "CWE-22",
+            "CWE-27"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.29.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-wc69-rhjr-hc9g",
+          "aliases": [
+            "CVE-2022-31129",
+            "GHSA-wc69-rhjr-hc9g"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Regular Expression Denial of Service (ReDoS), Affecting moment package, versions >=2.18.0 <2.29.4",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333",
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/moment/moment/security/advisories/GHSA-wc69-rhjr-hc9g",
+            "https://security.snyk.io/vuln/SNYK-JS-MOMENT-2944238"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.18.0",
+              "fixed": "2.29.4"
+            }
+          ]
+        }
+      ]
+    },
+    "bootstrap": {
+      "name": "Bootstrap",
+      "npm": "bootstrap",
+      "upstreamKey": "bootstrap",
+      "coverage": "retire",
+      "latest": "5.3.8",
+      "releaseSource": "https://registry.npmjs.org/bootstrap/latest",
+      "advisories": [
+        {
+          "id": "RETIRE-bootstrap-c72155b9d389",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "cross-site scripting vulnerability",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/twbs/bootstrap/pull/3421"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.1.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3mgp-fx93-9xv5",
+          "aliases": [
+            "CVE-2018-20676",
+            "GHSA-3mgp-fx93-9xv5"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "In Bootstrap before 3.4.0, XSS is possible in the tooltip data-viewport attribute.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-20676"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-ph58-4vrj-w6hr",
+          "aliases": [
+            "CVE-2018-20677",
+            "GHSA-ph58-4vrj-w6hr"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "In Bootstrap before 3.4.0, XSS is possible in the affix configuration target property.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-ph58-4vrj-w6hr"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3wqf-4x89-9g79",
+          "aliases": [
+            "CVE-2018-14040",
+            "GHSA-3wqf-4x89-9g79"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS in collapse data-parent attribute",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/twbs/bootstrap/issues/20184"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.3.0",
+              "fixed": "3.4.0"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.1.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-7mvr-5x2g-wfc8",
+          "aliases": [
+            "CVE-2018-14042",
+            "GHSA-7mvr-5x2g-wfc8"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS in data-container property of tooltip",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/twbs/bootstrap/issues/20184"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.3.0",
+              "fixed": "3.4.0"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.1.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4p24-vmcr-4gqj",
+          "aliases": [
+            "CVE-2016-10735",
+            "GHSA-4p24-vmcr-4gqj"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS is possible in the data-target attribute.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-4p24-vmcr-4gqj"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.0.0",
+              "fixed": "3.4.0"
+            },
+            {
+              "introduced": "4.0.0-beta",
+              "fixed": "4.0.0-beta.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-9v3m-8fp8-mj99",
+          "aliases": [
+            "CVE-2019-8331",
+            "GHSA-9v3m-8fp8-mj99"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS in data-template, data-content and data-title properties of tooltip/popover",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-9v3m-8fp8-mj99",
+            "https://github.com/twbs/bootstrap/issues/28236"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.0.0",
+              "fixed": "3.4.1"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.3.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-vxmc-5x29-h64v",
+          "aliases": [
+            "CVE-2024-6485",
+            "GHSA-vxmc-5x29-h64v"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Bootstrap Cross-Site Scripting (XSS) vulnerability for data-* attributes",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-vxmc-5x29-h64v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-6485",
+            "https://github.com/twbs/bootstrap",
+            "https://www.herodevs.com/vulnerability-directory/cve-2024-6485"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.4.0",
+              "fixed": "3.4.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-q58r-hwc8-rm9j",
+          "aliases": [
+            "CVE-2025-1647",
+            "GHSA-q58r-hwc8-rm9j"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Bootstrap allows Cross-Site Scripting (XSS). This issue affects Bootstrap version 3.4.1. At time of publication, there is no publicly available patched version.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://lists.debian.org/debian-lts-announce/2025/06/msg00001.html",
+            "https://www.herodevs.com/vulnerability-directory/cve-2025-1647"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.4.1",
+              "fixed": "3.4.2"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-bootstrap-72",
+          "aliases": [],
+          "kind": "maintenance",
+          "severity": "low",
+          "summary": "Bootstrap before 4.0.0 is end-of-life and no longer maintained.",
+          "why": "This release no longer receives security fixes. Future problems may remain unpatched.",
+          "cwe": [
+            "CWE-1104"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/twbs/bootstrap/issues/20631"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.999.999"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-pj7m-g53m-7638",
+          "aliases": [
+            "CVE-2018-14041",
+            "GHSA-pj7m-g53m-7638"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "XSS in data-target property of scrollspy",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-pj7m-g53m-7638",
+            "https://github.com/twbs/bootstrap/issues/20184"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    },
+    "backbone": {
+      "name": "Backbone",
+      "npm": "backbone",
+      "upstreamKey": "backbone.js",
+      "coverage": "retire",
+      "latest": "1.6.1",
+      "releaseSource": "https://registry.npmjs.org/backbone/latest",
+      "advisories": [
+        {
+          "id": "GHSA-j6p2-cx3w-6jcp",
+          "aliases": [
+            "CVE-2016-10537",
+            "GHSA-j6p2-cx3w-6jcp"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "cross-site scripting vulnerability",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "http://backbonejs.org/#changelog"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.3.3",
+              "fixed": "0.5.0"
+            }
+          ]
+        }
+      ]
+    },
+    "handlebars": {
+      "name": "Handlebars",
+      "npm": "handlebars",
+      "upstreamKey": "handlebars",
+      "coverage": "retire",
+      "latest": "4.7.9",
+      "releaseSource": "https://registry.npmjs.org/handlebars/latest",
+      "advisories": [
+        {
+          "id": "RETIRE-handlebars-73b74457d926",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "poorly sanitized input passed to eval()",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/wycats/handlebars.js/pull/68"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.0.0.beta.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-q42p-pg8m-cqh6",
+          "aliases": [
+            "GHSA-q42p-pg8m-cqh6"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "A prototype pollution vulnerability in handlebars is exploitable if an attacker can control the template",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-471"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-q42p-pg8m-cqh6",
+            "https://github.com/wycats/handlebars.js/commit/cd38583216dce3252831916323202749431c773e",
+            "https://github.com/wycats/handlebars.js/issues/1495",
+            "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-174183"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.7"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.0.14"
+            },
+            {
+              "introduced": "4.1.0",
+              "fixed": "4.1.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2cf5-4w76-r9qv",
+          "aliases": [
+            "GHSA-2cf5-4w76-r9qv"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Versions of Handlebars prior to 3.0.8 or 4.5.2 are vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to craft templates that execute arbitrary JavaScript on the server or in a victim's browser via XSS.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-2cf5-4w76-r9qv",
+            "https://www.npmjs.com/advisories/1316"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.8"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.5.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3cqr-58rm-57f8",
+          "aliases": [
+            "CVE-2019-20920",
+            "GHSA-3cqr-58rm-57f8"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Handlebars before 3.0.8 and 4.x before 4.5.3 is vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript. This can be used to run arbitrary code on a server processing Handlebars templates or in a victim's browser (effectively serving as XSS).",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-3cqr-58rm-57f8",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-20920"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.8"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.5.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-g9r4-xpmj-mj65",
+          "aliases": [
+            "GHSA-g9r4-xpmj-mj65"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype pollution",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-g9r4-xpmj-mj65",
+            "https://github.com/wycats/handlebars.js/blob/master/release-notes.md#v453---november-18th-2019"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.8"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.5.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-q2c6-c6pm-g3gh",
+          "aliases": [
+            "GHSA-q2c6-c6pm-g3gh"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Handlebars prior to 3.0.8 or 4.5.3 is vulnerable to Arbitrary Code Execution; the lookup helper fails to properly validate templates, allowing attackers to run arbitrary JavaScript in the server or victim's browser.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-q2c6-c6pm-g3gh",
+            "https://github.com/wycats/handlebars.js/blob/master/release-notes.md#v453---november-18th-2019"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.8"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.5.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-w457-6q6x-cgp9",
+          "aliases": [
+            "CVE-2019-19919",
+            "GHSA-w457-6q6x-cgp9"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Disallow calling helperMissing and blockHelperMissing directly",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-74"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/wycats/handlebars.js/blob/master/release-notes.md#v430---september-24th-2019"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "3.0.8"
+            },
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.3.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-9prh-257w-9277",
+          "aliases": [
+            "CVE-2015-8861",
+            "GHSA-9prh-257w-9277"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Quoteless attributes in templates can lead to XSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/wycats/handlebars.js/pull/1083"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.0.0"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-handlebars-43",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "A prototype pollution vulnerability in handlebars is exploitable if an attacker can control the template",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/wycats/handlebars.js/commit/7372d4e9dffc9d70c09671aa28b9392a1577fd86",
+            "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-173692"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.0.13"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-62gr-4qp9-h98f",
+          "aliases": [
+            "CVE-2019-20922",
+            "GHSA-62gr-4qp9-h98f"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Regular Expression Denial of Service in Handlebars",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-20922"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.4.5"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-f52g-6jhx-586p",
+          "aliases": [
+            "GHSA-f52g-6jhx-586p"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Affected versions of Handlebars are vulnerable to Denial of Service. The template parser can be forced into an endless loop when processing specially crafted templates, potentially exhausting system resources.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/commit/f0589701698268578199be25285b2ebea1c1e427"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.4.5"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-handlebars-e53549b172d7",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Denial of service",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/pull/1633"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.6.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-765h-qjxv-5f44",
+          "aliases": [
+            "CVE-2021-23383",
+            "GHSA-765h-qjxv-5f44"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype Pollution in handlebars",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-23383"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.7.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-f2jv-r9rf-7988",
+          "aliases": [
+            "CVE-2021-23369",
+            "GHSA-f2jv-r9rf-7988"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Remote code execution in handlebars when compiling templates",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-23369"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "4.7.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2qvq-rjwj-gvw9",
+          "aliases": [
+            "CVE-2026-33916",
+            "GHSA-2qvq-rjwj-gvw9"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Handlebars is vulnerable to XSS via prototype pollution: the resolvePartial() function looks up partial names with an unguarded property access that traverses the prototype chain. If Object.prototype has been polluted with a string value matching a partial name, the polluted content is rendered unescaped, allowing cross-site scripting.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-2w6w-674q-4c4q",
+          "aliases": [
+            "CVE-2026-33937",
+            "GHSA-2w6w-674q-4c4q"
+          ],
+          "kind": "vulnerability",
+          "severity": "critical",
+          "summary": "Handlebars is vulnerable to Remote Code Execution when Handlebars.compile() is passed an attacker-controlled pre-parsed AST object. The value field of a NumberLiteral AST node is emitted directly into the generated JavaScript without sanitization, allowing code injection that executes on the server.",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-843",
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3mfm-83xf-c92r",
+          "aliases": [
+            "CVE-2026-33938",
+            "GHSA-3mfm-83xf-c92r"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Handlebars is vulnerable to Remote Code Execution via the @partial-block mechanism. When a helper with write access to the template data context overwrites @partial-block with a crafted Handlebars AST, subsequent invocation of that partial causes the runtime to dynamically compile the AST, executing arbitrary JavaScript on the server.",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-843",
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-3mfm-83xf-c92r",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-442j-39wm-28r2",
+          "aliases": [
+            "GHSA-442j-39wm-28r2"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Handlebars has a time-of-check/time-of-use flaw in container.lookup() when the compat compile option is enabled. The function uses lookupProperty() as a security gate but then discards its result and performs a raw unguarded property access, bypassing prototype-access controls.",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-367"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-442j-39wm-28r2",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-9cx6-37pm-9jff",
+          "aliases": [
+            "CVE-2026-33939",
+            "GHSA-9cx6-37pm-9jff"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Handlebars is vulnerable to Denial of Service via unregistered decorator syntax. When a template contains a decorator reference to an unregistered decorator (e.g. {{*n}}), the compiled template attempts to invoke undefined as a function, causing an unhandled TypeError that crashes the Node.js process.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-754"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-9cx6-37pm-9jff",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xhpv-hc6g-r9c6",
+          "aliases": [
+            "CVE-2026-33940",
+            "GHSA-xhpv-hc6g-r9c6"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Handlebars is vulnerable to Remote Code Execution through dynamic partial lookups. A crafted object with call: true placed in the template context bypasses resolvePartial() guards and causes the runtime to compile the object as a Handlebars AST via env.compile(), executing injected JavaScript on the server.",
+          "why": "If attacker-controlled input reaches the affected feature, it may be interpreted as code instead of ordinary data.",
+          "cwe": [
+            "CWE-843",
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xhpv-hc6g-r9c6",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xjpj-3mr7-gcpf",
+          "aliases": [
+            "CVE-2026-33941",
+            "GHSA-xjpj-3mr7-gcpf"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "The Handlebars CLI precompiler is vulnerable to code injection through multiple unsanitized inputs: template file names, the namespace (-n), CommonJS path (-c), and AMD path (-h) options are all interpolated into generated JavaScript without escaping. An attacker who controls these values can inject arbitrary JavaScript that executes when the generated bundle is loaded.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-116",
+            "CWE-79",
+            "CWE-94"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xjpj-3mr7-gcpf",
+            "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.0.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-7rx3-28cr-v5wh",
+          "aliases": [
+            "GHSA-7rx3-28cr-v5wh"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Handlebars has an asymmetric prototype method blocklist where __lookupSetter__ is omitted while its counterparts are blocked. When the non-default runtime option allowProtoMethodsByDefault is set to true, __lookupSetter__ becomes accessible in templates, creating an inconsistent security boundary.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-7rx3-28cr-v5wh",
+            "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9"
+          ],
+          "ranges": [
+            {
+              "introduced": "4.6.0",
+              "fixed": "4.7.9"
+            }
+          ]
+        }
+      ]
+    },
+    "axios": {
+      "name": "Axios",
+      "npm": "axios",
+      "upstreamKey": "axios",
+      "coverage": "retire",
+      "latest": "1.20.0",
+      "releaseSource": "https://registry.npmjs.org/axios/latest",
+      "advisories": [
+        {
+          "id": "GHSA-42xw-2xvc-qx8m",
+          "aliases": [
+            "CVE-2019-10742",
+            "GHSA-42xw-2xvc-qx8m"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios up to and including 0.18.0 allows attackers to cause a denial of service (application crash) by continuing to accepting content after maxContentLength is exceeded",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-20",
+            "CWE-755"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10742",
+            "https://security.snyk.io/vuln/SNYK-JS-AXIOS-174505"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.18.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4w2v-q235-vp99",
+          "aliases": [
+            "CVE-2020-28168",
+            "GHSA-4w2v-q235-vp99"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios NPM package 0.21.0 contains a Server-Side Request Forgery (SSRF) vulnerability",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28168",
+            "https://security.snyk.io/vuln/SNYK-JS-AXIOS-1038255"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.21.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-cph5-m8f7-6c5x",
+          "aliases": [
+            "CVE-2021-3749",
+            "GHSA-cph5-m8f7-6c5x"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios is vulnerable to Inefficient Regular Expression Complexity",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-1333",
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3749",
+            "https://security.snyk.io/vuln/SNYK-JS-AXIOS-1579269"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.21.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-wf5p-g6vw-rhxx",
+          "aliases": [
+            "CVE-2023-45857",
+            "GHSA-wf5p-g6vw-rhxx"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios Cross-Site Request Forgery Vulnerability",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-352"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-wf5p-g6vw-rhxx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-45857",
+            "https://github.com/axios/axios/issues/6006",
+            "https://github.com/axios/axios/issues/6022",
+            "https://github.com/axios/axios/pull/6028",
+            "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0",
+            "https://github.com/axios/axios/releases/tag/v1.6.0",
+            "https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.8.1",
+              "fixed": "0.28.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.6.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-jr5f-v2jv-69x6",
+          "aliases": [
+            "CVE-2025-27152",
+            "GHSA-jr5f-v2jv-69x6"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/advisories/GHSA-jr5f-v2jv-69x6",
+            "https://github.com/axios/axios/security/advisories/GHSA-jr5f-v2jv-69x6",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27152",
+            "https://github.com/axios/axios/issues/6463",
+            "https://github.com/axios/axios/commit/fb8eec214ce7744b5ca787f2c3b8339b2f54b00f",
+            "https://github.com/axios/axios",
+            "https://github.com/axios/axios/releases/tag/v1.8.2"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.30.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.8.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-4hjh-wcwx-xvwj",
+          "aliases": [
+            "CVE-2025-58754",
+            "GHSA-4hjh-wcwx-xvwj"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "When Axios runs on Node.js and is given a data: scheme URL, it decodes the entire payload into memory and returns a synthetic 200 response, ignoring maxContentLength and maxBodyLength limits. An attacker can supply a very large data: URI to cause unbounded memory allocation and crash the process, constituting a Denial of Service.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-770"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-4hjh-wcwx-xvwj",
+            "https://github.com/axios/axios/pull/7011",
+            "https://github.com/axios/axios/commit/945435fc51467303768202250debb8d4ae892593",
+            "https://github.com/axios/axios/releases/tag/v1.12.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.28.0",
+              "fixed": "0.30.2"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.12.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-43fc-jf86-j433",
+          "aliases": [
+            "CVE-2026-25639",
+            "GHSA-43fc-jf86-j433"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "The mergeConfig function in axios crashes with a TypeError when processing configuration objects containing __proto__ as an own property, such as those created via JSON.parse. An attacker who can pass a JSON payload with __proto__ as a config key can trigger a complete Denial of Service.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-754"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-43fc-jf86-j433",
+            "https://github.com/axios/axios/pull/7369",
+            "https://github.com/axios/axios/pull/7388",
+            "https://github.com/axios/axios/commit/28c721588c7a77e7503d0a434e016f852c597b57",
+            "https://github.com/axios/axios/commit/d7ff1409c68168d3057fc3891f911b2b92616f9e",
+            "https://github.com/axios/axios/releases/tag/v0.30.3",
+            "https://github.com/axios/axios/releases/tag/v1.13.5"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.30.3"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.13.5"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3p68-rc4w-qgx5",
+          "aliases": [
+            "CVE-2025-62718",
+            "GHSA-3p68-rc4w-qgx5"
+          ],
+          "kind": "vulnerability",
+          "severity": "critical",
+          "summary": "Axios does not correctly normalize hostnames when checking NO_PROXY rules, causing requests to loopback addresses with a trailing dot (localhost.) or IPv6 literals ([::1]) to bypass NO_PROXY matching and be routed through the configured proxy. Attackers controlling request URLs can exploit this to bypass SSRF mitigations and reach sensitive loopback or internal services.",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-441",
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-3p68-rc4w-qgx5",
+            "https://github.com/axios/axios/pull/10661",
+            "https://github.com/axios/axios/commit/fb3befb6daac6cad26b2e54094d0f2d9e47f24df",
+            "https://datatracker.ietf.org/doc/html/rfc1034#section-3.1",
+            "https://datatracker.ietf.org/doc/html/rfc3986#section-3.2.2",
+            "https://github.com/axios/axios/releases/tag/v1.15.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-fvcv-3m26-pcqx",
+          "aliases": [
+            "CVE-2026-40175",
+            "GHSA-fvcv-3m26-pcqx"
+          ],
+          "kind": "vulnerability",
+          "severity": "critical",
+          "summary": "Axios is vulnerable to being used as a gadget in a prototype pollution attack chain: when Object.prototype is polluted with CRLF-containing header values via another dependency, Axios merges the polluted properties into request headers without sanitization. This allows HTTP request smuggling attacks including bypassing AWS IMDSv2 session token requirements to steal cloud credentials.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-113",
+            "CWE-444",
+            "CWE-918"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-fvcv-3m26-pcqx",
+            "https://github.com/axios/axios/pull/10660",
+            "https://github.com/axios/axios/commit/363185461b90b1b78845dc8a99a1f103d9b122a1",
+            "https://github.com/axios/axios/releases/tag/v1.15.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3g43-6gmg-66jw",
+          "aliases": [
+            "CVE-2026-44495",
+            "GHSA-3g43-6gmg-66jw"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios contains prototype pollution gadgets in request config processing; a polluted Object.prototype.transformResponse can be executed with access to request credentials and response data, enabling credential theft and response hijacking across all requests.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-94",
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-3g43-6gmg-66jw"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.19.0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-5c9x-8gcm-mpgx",
+          "aliases": [
+            "CVE-2026-42034",
+            "GHSA-5c9x-8gcm-mpgx"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios does not enforce maxBodyLength for stream request bodies when maxRedirects is set to 0, because the native HTTP transport path used in that configuration does not perform byte counting. Oversized streamed uploads are sent in full despite the configured body size limit, enabling uncontrolled upstream data transfer and potential resource exhaustion.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-5c9x-8gcm-mpgx"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-62hf-57xw-28j9",
+          "aliases": [
+            "CVE-2026-42039",
+            "GHSA-62hf-57xw-28j9"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "The toFormData helper in Axios recursively walks nested objects without a depth limit or try/catch protection. An attacker who can provide a deeply nested object as request data or params can trigger a stack overflow, crashing the Node.js request handler or process.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-674"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-62hf-57xw-28j9"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-6chq-wfr3-2hj9",
+          "aliases": [
+            "CVE-2026-42035",
+            "GHSA-6chq-wfr3-2hj9"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios is vulnerable to a prototype pollution gadget that allows header injection in the Node.js HTTP adapter. When Object.prototype is polluted with duck-typed FormData properties including getHeaders, Axios treats any plain object payload as a FormData instance and calls the attacker-controlled getHeaders() function, merging arbitrary headers into the outgoing request.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-113",
+            "CWE-1321"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-m7pr-hjqh-92cm",
+          "aliases": [
+            "CVE-2026-42038",
+            "GHSA-m7pr-hjqh-92cm"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "The fix for the NO_PROXY hostname normalization bypass (GHSA-3p68-rc4w-qgx5) is incomplete: shouldBypassProxy() does not resolve loopback address equivalents. When NO_PROXY=localhost is set, requests to 127.0.0.1 and [::1] are still routed through the configured proxy, enabling SSRF bypasses against internal services.",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-m7pr-hjqh-92cm"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-pf86-5x62-jrwf",
+          "aliases": [
+            "CVE-2026-42033",
+            "GHSA-pf86-5x62-jrwf"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios has multiple prototype pollution gadgets where config properties are read without hasOwnProperty guards. When Object.prototype is polluted by a co-dependency, an attacker can silently intercept and modify every JSON response (parseReviver gadget) or fully hijack the underlying HTTP transport to intercept credentials and headers (transport gadget).",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-pmwg-cvhr-8vh7",
+          "aliases": [
+            "CVE-2026-42043",
+            "GHSA-pmwg-cvhr-8vh7"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "The Axios 1.15.0 patch for NO_PROXY hostname normalization is incomplete: the isLoopback() function only recognizes three specific addresses (localhost, 127.0.0.1, ::1) but not the full RFC 1122 loopback subnet 127.0.0.0/8. Requests to any 127.x.x.x address other than 127.0.0.1 bypass NO_PROXY matching and are routed through the configured proxy, enabling SSRF.",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-183",
+            "CWE-441",
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-pmwg-cvhr-8vh7"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-vf2m-468p-8v99",
+          "aliases": [
+            "CVE-2026-42036",
+            "GHSA-vf2m-468p-8v99"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios does not enforce maxContentLength when responseType is set to 'stream'. The response stream is returned directly without byte-counting, allowing unbounded downstream consumption of arbitrarily large server responses despite the configured limit.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-vf2m-468p-8v99"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-w9j2-pvgh-6h63",
+          "aliases": [
+            "CVE-2026-42041",
+            "GHSA-w9j2-pvgh-6h63"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios is vulnerable to a prototype pollution gadget via the validateStatus config property, which uniquely uses the JavaScript in operator (which traverses the prototype chain) during config merging. When Object.prototype.validateStatus is polluted with () => true, all HTTP error responses (401, 403, 500, etc.) are silently treated as successes, bypassing authentication and error handling.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-287"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-w9j2-pvgh-6h63"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xhjh-pmcv-23jw",
+          "aliases": [
+            "CVE-2026-42040",
+            "GHSA-xhjh-pmcv-23jw"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "The encode() function in Axios's AxiosURLSearchParams helper contains a character map entry that reverses the safe percent-encoding of null bytes: '%00' is mapped back to a raw null byte '\\x00' after encodeURIComponent has correctly encoded it. Applications using AxiosURLSearchParams directly without an external encoder will produce URLs containing raw null bytes, which can cause truncation or WAF bypass in downstream C-based parsers.",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-116",
+            "CWE-626"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-xhjh-pmcv-23jw"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xx6v-rp6x-q39c",
+          "aliases": [
+            "CVE-2026-42042",
+            "GHSA-xx6v-rp6x-q39c"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios's XSRF token protection uses truthy/falsy semantics rather than strict boolean comparison for the withXSRFToken config property. When Object.prototype is polluted with any truthy non-boolean value for withXSRFToken, the same-origin check is bypassed and the XSRF token is sent to all cross-origin destinations, enabling CSRF attacks after token theft.",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-183",
+            "CWE-201"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-xx6v-rp6x-q39c"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.31.1"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-898c-q2cr-xwhg",
+          "aliases": [
+            "CVE-2026-44490",
+            "GHSA-898c-q2cr-xwhg"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios 1.15.2 exposes two prototype pollution gadgets: HTTP header injection via utils.merge() building plain objects that walk the prototype chain, and a crash DoS where a polluted Object.prototype.get or .set causes TypeError on every axios request.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-898c-q2cr-xwhg"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.32.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-hfxv-24rg-xrqf",
+          "aliases": [
+            "CVE-2026-44496",
+            "GHSA-hfxv-24rg-xrqf"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios: Regular Expression Denial of Service (ReDoS) via Cookie Name Injection",
+          "why": "Specially crafted input can take excessive time to process, potentially freezing a page or exhausting a service.",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-hfxv-24rg-xrqf",
+            "https://github.com/axios/axios/releases/tag/v0.32.0",
+            "https://github.com/axios/axios/releases/tag/v1.16.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.32.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-j5f8-grm9-p9fc",
+          "aliases": [
+            "CVE-2026-44486",
+            "GHSA-j5f8-grm9-p9fc"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios: Proxy-Authorization header leaks to redirect target when proxy is re-evaluated to direct connection",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-200"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-j5f8-grm9-p9fc",
+            "https://github.com/axios/axios/pull/10794",
+            "https://github.com/axios/axios/commit/afca61a070728e717203c2bc21e7b589b59b858b",
+            "https://github.com/axios/axios/releases/tag/v0.32.0",
+            "https://github.com/axios/axios/releases/tag/v1.16.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.32.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-p92q-9vqr-4j8v",
+          "aliases": [
+            "CVE-2026-44487",
+            "GHSA-p92q-9vqr-4j8v"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios: Proxy-Authorization Credential Leak to Origin Server Across HTTP-to-HTTPS Redirect in Axios Node.js HTTP Adapter",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-201"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-p92q-9vqr-4j8v",
+            "https://github.com/axios/axios/releases/tag/v0.32.0",
+            "https://github.com/axios/axios/releases/tag/v1.16.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.32.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-pjwm-pj3p-43mv",
+          "aliases": [
+            "CVE-2026-44492",
+            "GHSA-pjwm-pj3p-43mv"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "The shouldBypassProxy function introduced in Axios 1.15.0 does not normalize IPv4-mapped IPv6 addresses, allowing bypass of NO_PROXY exclusions when requests use IPv4-mapped IPv6 notation to target excluded IPv4 addresses.",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-289",
+            "CWE-918"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-pjwm-pj3p-43mv"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.32.0"
+            },
+            {
+              "introduced": "1.15.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-7q8q-rj6j-mhjq",
+          "aliases": [
+            "CVE-2026-67319",
+            "GHSA-7q8q-rj6j-mhjq"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Nested axios option objects can consume polluted prototype values",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-7q8q-rj6j-mhjq",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.8.0",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-42h9-826w-cgv3",
+          "aliases": [
+            "CVE-2026-67313",
+            "GHSA-42h9-826w-cgv3"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Excessive recursion in formDataToJSON can cause denial of service",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400",
+            "CWE-674"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-42h9-826w-cgv3",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.28.0",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-pmv8-rq9r-6j72",
+          "aliases": [
+            "CVE-2026-67312",
+            "GHSA-pmv8-rq9r-6j72"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Deep formToJSON Key Recursion Can Cause Denial of Service",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-pmv8-rq9r-6j72",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.28.0",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-f4gw-2p7v-4548",
+          "aliases": [
+            "CVE-2026-67315",
+            "GHSA-f4gw-2p7v-4548"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: NO_PROXY bypass for 0.0.0.0 local addresses in axios",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-183",
+            "CWE-918"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-f4gw-2p7v-4548",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.31.0",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.15.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-gcfj-64vw-6mp9",
+          "aliases": [
+            "CVE-2026-67320",
+            "GHSA-gcfj-64vw-6mp9"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios Node HTTP adapter can use an inherited proxy after interceptor config cloning",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-200"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-gcfj-64vw-6mp9",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.31.1",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.15.2",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-hcpx-6fm6-wx23",
+          "aliases": [
+            "CVE-2026-67321",
+            "GHSA-hcpx-6fm6-wx23"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios form serializer maxDepth bypass via {} metatoken",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-674"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-hcpx-6fm6-wx23",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0.31.1",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.15.1",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mmx7-hfxf-jppx",
+          "aliases": [
+            "CVE-2026-67316",
+            "GHSA-mmx7-hfxf-jppx"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Prototype pollution gadgets can alter axios request construction",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-mmx7-hfxf-jppx",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/pull/11001",
+            "https://github.com/axios/axios/commit/1417285c69344bbcc6420a021f67dee0c6fedb2d",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v0.33.0",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "0.33.0"
+            },
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-axios-384b10cccafb",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Versions before 1.6.8 depends on follow-redirects before 1.15.6 which could leak the proxy authentication credentials",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-200"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/pull/6300"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "1.6.8"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-8hc4-vh64-cxmj",
+          "aliases": [
+            "CVE-2024-39338",
+            "GHSA-8hc4-vh64-cxmj"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Server-Side Request Forgery in axios",
+          "why": "In affected server-side uses, an attacker may make the application send requests to unintended destinations, including private services.",
+          "cwe": [
+            "CWE-918"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/advisories/GHSA-8hc4-vh64-cxmj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-39338",
+            "https://github.com/axios/axios/issues/6463",
+            "https://github.com/axios/axios/pull/6539",
+            "https://github.com/axios/axios/pull/6543",
+            "https://github.com/axios/axios/commit/6b6b605eaf73852fb2dae033f1e786155959de3a",
+            "https://github.com/axios/axios",
+            "https://github.com/axios/axios/releases",
+            "https://github.com/axios/axios/releases/tag/v1.7.4",
+            "https://jeffhacks.com/advisories/2024/06/24/CVE-2024-39338.html"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.3.2",
+              "fixed": "1.7.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-qj83-cq47-w5f8",
+          "aliases": [
+            "CVE-2026-39865",
+            "GHSA-qj83-cq47-w5f8"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "A state corruption bug in axios's HTTP/2 session cleanup logic allows a malicious server to crash the client process through concurrent session closures. After splicing an entry from the sessions array, iteration continues over the modified array, causing undefined behavior and potential crashes when a server closes multiple HTTP/2 sessions simultaneously.",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-qj83-cq47-w5f8",
+            "https://github.com/axios/axios/releases/tag/v1.13.2"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.13.0",
+              "fixed": "1.13.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-445q-vr5w-6q77",
+          "aliases": [
+            "CVE-2026-42037",
+            "GHSA-445q-vr5w-6q77"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios is vulnerable to CRLF injection via the Content-Type header in multipart form-data requests. When constructing per-part headers for binary or Blob-like values, value.type is interpolated without sanitizing CRLF sequences, allowing an attacker who controls the MIME type of an uploaded file to inject arbitrary headers into the multipart body.",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-93"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-445q-vr5w-6q77"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.1"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-3w6x-2g7m-8v23",
+          "aliases": [
+            "CVE-2026-42044",
+            "GHSA-3w6x-2g7m-8v23"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios is vulnerable to a prototype pollution gadget via the parseReviver configuration property. When Object.prototype.parseReviver is polluted, Axios uses the attacker-controlled function as a JSON.parse reviver on every response, enabling silent selective modification of JSON values (e.g. privilege escalation) and exfiltration of all response data including API keys.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-915"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-3w6x-2g7m-8v23"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-q8qp-cvcw-x6jj",
+          "aliases": [
+            "CVE-2026-42264",
+            "GHSA-q8qp-cvcw-x6jj"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios has five config properties (auth, baseURL, socketPath, beforeRedirect, insecureHTTPParser) that are read from the merged config object without hasOwnProperty guards, making them exploitable as prototype pollution gadgets. When Object.prototype is polluted, these properties enable credential injection, request hijacking to attacker-controlled servers, SSRF via Unix sockets, and arbitrary code execution via redirect callbacks.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "server",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-q8qp-cvcw-x6jj"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.15.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-35jp-ww65-95wh",
+          "aliases": [
+            "CVE-2026-44494",
+            "GHSA-35jp-ww65-95wh"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Axios is vulnerable to a prototype pollution gadget attack where a polluted Object.prototype.proxy causes all HTTP requests to be routed through an attacker-controlled proxy, enabling full man-in-the-middle attacks including credential interception.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-441",
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-35jp-ww65-95wh"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-777c-7fjr-54vf",
+          "aliases": [
+            "CVE-2026-44488",
+            "GHSA-777c-7fjr-54vf"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Allocation of Resources Without Limits or Throttling in Axios",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-777c-7fjr-54vf",
+            "https://github.com/axios/axios/pull/10795",
+            "https://github.com/axios/axios/pull/10796",
+            "https://github.com/axios/axios/releases/tag/v1.16.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.7.0",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-654m-c8p4-x5fp",
+          "aliases": [
+            "CVE-2026-44489",
+            "GHSA-654m-c8p4-x5fp"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Axios 1.15.2 has an incomplete prototype pollution fix: nested proxy objects created by utils.merge() remain plain objects, allowing a polluted Object.prototype.username to inject Proxy-Authorization headers into all proxied HTTP requests.",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-113",
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-654m-c8p4-x5fp",
+            "https://github.com/axios/axios/security/advisories/GHSA-q8qp-cvcw-x6jj"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.15.2",
+              "fixed": "1.16.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-jqh4-m9w3-8hp9",
+          "aliases": [
+            "CVE-2026-67317",
+            "GHSA-jqh4-m9w3-8hp9"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Fetch adapter `ReadableStream` uploads bypass `maxBodyLength`",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-770"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-jqh4-m9w3-8hp9",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.7.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mwf2-3pr3-8698",
+          "aliases": [
+            "CVE-2026-67318",
+            "GHSA-mwf2-3pr3-8698"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: HTTP/2 streamed uploads bypass `maxBodyLength`",
+          "why": "Crafted input can consume excessive resources or crash the affected application. The impact depends on the feature and runtime used.",
+          "cwe": [
+            "CWE-400"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-mwf2-3pr3-8698",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.13.0",
+              "fixed": "1.18.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-xj6q-8x83-jv6g",
+          "aliases": [
+            "CVE-2026-67314",
+            "GHSA-xj6q-8x83-jv6g"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Axios: Prototype pollution auth subfields can inject Basic auth",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/axios/axios/security/advisories/GHSA-xj6q-8x83-jv6g",
+            "https://github.com/axios/axios/pull/11000",
+            "https://github.com/axios/axios/commit/32fc489632377d214db55bfa4e2c48486a7d7ce2",
+            "https://github.com/axios/axios/releases/tag/v1.18.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.15.2",
+              "fixed": "1.18.0"
+            }
+          ]
+        }
+      ]
+    },
+    "d3": {
+      "name": "D3",
+      "npm": "d3",
+      "upstreamKey": "d3",
+      "coverage": "retire",
+      "latest": "7.9.0",
+      "releaseSource": "https://registry.npmjs.org/d3/latest",
+      "advisories": []
+    },
+    "chartjs": {
+      "name": "Chart.js",
+      "npm": "chart.js",
+      "upstreamKey": "chart.js",
+      "coverage": "retire",
+      "latest": "4.5.1",
+      "releaseSource": "https://registry.npmjs.org/chart.js/latest",
+      "advisories": [
+        {
+          "id": "GHSA-h68q-55jf-x68w",
+          "aliases": [
+            "CVE-2020-7746",
+            "GHSA-h68q-55jf-x68w"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "Prototype pollution in chart.js",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-915"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-h68q-55jf-x68w"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.9.4"
+            }
+          ]
+        }
+      ]
+    },
+    "dompurify": {
+      "name": "DOMPurify",
+      "npm": "dompurify",
+      "upstreamKey": "DOMPurify",
+      "coverage": "retire",
+      "latest": "3.4.15",
+      "releaseSource": "https://registry.npmjs.org/dompurify/latest",
+      "advisories": [
+        {
+          "id": "RETIRE-dompurify-24",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Security advisory affecting DOMPurify; see the linked upstream reference.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases/tag/0.6.1"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.6.1"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-25",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Security advisory affecting DOMPurify; see the linked upstream reference.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases/tag/0.8.6"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.8.6"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-26",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "safari UXSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases/tag/0.8.9",
+            "https://lists.ruhr-uni-bochum.de/pipermail/dompurify-security/2017-May/000006.html"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.8.9"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-27",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "safari UXSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases/tag/0.9.0"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "0.9.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-8hgg-xxm5-3873",
+          "aliases": [
+            "CVE-2019-25155",
+            "GHSA-8hgg-xxm5-3873"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify Open Redirect vulnerability",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-601"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-8hgg-xxm5-3873",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-25155",
+            "https://github.com/cure53/DOMPurify/pull/337",
+            "https://github.com/cure53/DOMPurify/commit/7601c33a57e029cce51d910eda5179a3f1b51c83",
+            "https://github.com/cure53/DOMPurify",
+            "https://github.com/cure53/DOMPurify/compare/1.0.10...1.0.11"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "1.0.11"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-chqj-j4fh-rw7m",
+          "aliases": [
+            "CVE-2019-16728",
+            "GHSA-chqj-j4fh-rw7m"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Fixed an mXSS-based bypass caused by nested forms inside MathML",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.0.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mjjq-c88q-qhr6",
+          "aliases": [
+            "GHSA-mjjq-c88q-qhr6"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "possible to bypass the package sanitization through Mutation XSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.0.7"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-28",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fixed an mXSS-based bypass caused by nested forms inside MathML",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.0.16"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-63q7-h895-m982",
+          "aliases": [
+            "CVE-2020-26870",
+            "GHSA-63q7-h895-m982"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "Fixed another bypass causing mXSS by using MathML",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.0.17"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-30",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fixed several possible mXSS patterns, thanks @hackvertor",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.1.1"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-31",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fix a possible XSS in Chrome that is hidden behind #enable-experimental-web-platform-features",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.2.0"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-32",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fixed an mXSS bypass dropped on us publicly via",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.2.2"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-33",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fixed an mXSS issue reported",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.2.3"
+            }
+          ]
+        },
+        {
+          "id": "RETIRE-dompurify-34",
+          "aliases": [],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "Fixed a new MathML-based bypass submitted by PewGrand. Fixed a new SVG-related bypass submitted by SecurityMB",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/releases"
+          ],
+          "ranges": [
+            {
+              "introduced": null,
+              "fixed": "2.2.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-p3vf-v8qc-cwcr",
+          "aliases": [
+            "CVE-2024-48910",
+            "GHSA-p3vf-v8qc-cwcr"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "DOMPurify vulnerable to tampering by prototype polution",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-p3vf-v8qc-cwcr",
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-p3vf-v8qc-cwcr",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-48910",
+            "https://github.com/cure53/DOMPurify/commit/d1dd0374caef2b4c56c3bd09fe1988c3479166dc",
+            "https://github.com/cure53/DOMPurify"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "2.4.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-gx9m-whjm-85jf",
+          "aliases": [
+            "CVE-2024-47875",
+            "GHSA-gx9m-whjm-85jf"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "DOMpurify has a nesting-based mXSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-gx9m-whjm-85jf",
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-gx9m-whjm-85jf",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-47875",
+            "https://github.com/cure53/DOMPurify/commit/0ef5e537a514f904b6aa1d7ad9e749e365d7185f",
+            "https://github.com/cure53/DOMPurify/commit/6ea80cd8b47640c20f2f230c7920b1f4ce4fdf7a",
+            "https://github.com/cure53/DOMPurify",
+            "https://github.com/cure53/DOMPurify/blob/0ef5e537a514f904b6aa1d7ad9e749e365d7185f/test/test-suite.js#L2098"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "2.5.0"
+            },
+            {
+              "introduced": "3.0.0",
+              "fixed": "3.1.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-mmhx-hmjr-r674",
+          "aliases": [
+            "CVE-2024-45801",
+            "GHSA-mmhx-hmjr-r674"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "DOMPurify allows tampering by prototype pollution",
+          "why": "Crafted input may change shared JavaScript object properties, causing unexpected behavior or bypassing checks in code that uses them.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-1333"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-mmhx-hmjr-r674",
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-mmhx-hmjr-r674",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45801",
+            "https://github.com/cure53/DOMPurify/commit/1e520262bf4c66b5efda49e2316d6d1246ca7b21",
+            "https://github.com/cure53/DOMPurify/commit/26e1d69ca7f769f5c558619d644d90dd8bf26ebc",
+            "https://github.com/cure53/DOMPurify"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "2.5.4"
+            },
+            {
+              "introduced": "3.0.0",
+              "fixed": "3.1.3"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-v2wj-7wpq-c8vv",
+          "aliases": [
+            "CVE-2026-0540",
+            "GHSA-v2wj-7wpq-c8vv"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify 3.1.3-3.3.1 and 2.5.3-2.5.8 contain a cross-site scripting vulnerability allowing bypass of attribute sanitization via five missing rawtext elements in the SAFE_FOR_XML regex.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/commit/fca0a938b4261ddc9c0293a289935a9029c049f5",
+            "https://www.vulncheck.com/advisories/dompurify-xss-via-missing-rawtext-elements-in-safe-for-xml",
+            "https://www.vulncheck.com/advisories/dompurify-xss-via-missing-rawtext-elements-in-safeforxml"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.5.3",
+              "fixed": "2.5.9"
+            },
+            {
+              "introduced": "3.1.3",
+              "fixed": "3.3.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-v8jm-5vwx-cfxm",
+          "aliases": [
+            "CVE-2025-15599",
+            "GHSA-v8jm-5vwx-cfxm"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify 3.1.3 through 3.2.6 and 2.5.3 through 2.5.8 contain a cross-site scripting vulnerability that allows attackers to bypass attribute sanitization by exploiting missing textarea rawtext element validation in the SAFE_FOR_XML regex. Attackers can include closing rawtext tags like </textarea> in attribute values to break out of rawtext contexts and execute JavaScript when sanitized output is placed inside rawtext elements. The 3.x branch was fixed in 3.2.7; the 2.x branch was never patched.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/commit/c861f5a83fb8d90800f1680f855fee551161ac2b",
+            "https://www.vulncheck.com/advisories/dompurify-xss-via-textarea-rawtext-bypass-in-safe-for-xml",
+            "https://www.vulncheck.com/advisories/dompurify-xss-via-textarea-rawtext-bypass-in-safeforxml"
+          ],
+          "ranges": [
+            {
+              "introduced": "2.5.3",
+              "fixed": "2.5.9"
+            },
+            {
+              "introduced": "3.1.3",
+              "fixed": "3.2.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-vhxf-7vqr-mrjg",
+          "aliases": [
+            "CVE-2025-26791",
+            "GHSA-vhxf-7vqr-mrjg"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify allows Cross-site Scripting (XSS)",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/advisories/GHSA-vhxf-7vqr-mrjg",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-26791",
+            "https://github.com/cure53/DOMPurify/commit/d18ffcb554e0001748865da03ac75dd7829f0f02",
+            "https://ensy.zip/posts/dompurify-323-bypass",
+            "https://github.com/cure53/DOMPurify",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.2.4",
+            "https://nsysean.github.io/posts/dompurify-323-bypass"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.2.4"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-cj63-jhhr-wcxv",
+          "aliases": [
+            "CVE-2026-65913",
+            "GHSA-cj63-jhhr-wcxv"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "When USE_PROFILES is enabled, DOMPurify rebuilds ALLOWED_ATTR as a plain array whose properties are looked up by name, making it susceptible to prototype pollution. If Array.prototype has been polluted with an event handler attribute name (e.g. onclick), DOMPurify will allow that event handler to survive sanitization, resulting in DOM-based XSS.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-cj63-jhhr-wcxv",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.3.2"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.3.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-cjmm-f4jc-qw8r",
+          "aliases": [
+            "CVE-2026-65912",
+            "GHSA-cjmm-f4jc-qw8r"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify's ADD_ATTR predicate function mechanism (via EXTRA_ELEMENT_HANDLING.attributeCheck) short-circuits URI validation when the predicate returns true. This allows unsafe protocols such as javascript: to survive sanitization in href and similar attributes, enabling DOM-based XSS when such links are activated.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-183"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-cjmm-f4jc-qw8r",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.3.2"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.3.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-h8r8-wccr-v5f2",
+          "aliases": [
+            "CVE-2026-65914",
+            "GHSA-h8r8-wccr-v5f2"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify is vulnerable to mutation-XSS (mXSS) when sanitized HTML is embedded into special raw-text wrapper elements such as xmp, script, iframe, noembed, noframes, or noscript before being assigned via innerHTML. Attacker-controlled sequences like </xmp> inside attribute values close the raw-text context during the second parse, causing the sanitized output to mutate into executable markup.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-h8r8-wccr-v5f2",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.3.2"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.3.2"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-39q2-94rc-95cp",
+          "aliases": [
+            "CVE-2026-65903",
+            "GHSA-39q2-94rc-95cp"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify has a logic inconsistency where FORBID_TAGS is not checked when a function-based ADD_TAGS (tagCheck) returns true. Due to short-circuit evaluation, the FORBID_TAGS check is never evaluated, allowing explicitly forbidden elements to pass through sanitization when EXTRA_ELEMENT_HANDLING.tagCheck is configured.",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-783"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-39q2-94rc-95cp"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-h7mw-gpvr-xq4m",
+          "aliases": [
+            "CVE-2026-41240",
+            "GHSA-h7mw-gpvr-xq4m"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify has an asymmetric security inconsistency where FORBID_TAGS does not win over a function-based ADD_TAGS predicate, while FORBID_ATTR correctly wins over ADD_ATTR. When ADD_TAGS is provided as a function that returns true, explicitly forbidden tags such as iframe and form pass through sanitization with their attributes intact.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-183",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-h7mw-gpvr-xq4m",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.4.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-crv5-9vww-q3g8",
+          "aliases": [
+            "CVE-2026-41239",
+            "GHSA-crv5-9vww-q3g8"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify's SAFE_FOR_TEMPLATES feature fails to strip Mustache/template expressions when RETURN_DOM or RETURN_DOM_FRAGMENT is used. The final string-scrubbing pass that removes expressions like {{...}} is skipped in DOM-return mode, and split text nodes (e.g. from removed intermediate tags) can rejoin to form a complete expression that template-evaluating frameworks like Vue 2 will execute.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-1289",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-crv5-9vww-q3g8",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.4.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "1.0.10",
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-v9jr-rg53-9pgp",
+          "aliases": [
+            "CVE-2026-41238",
+            "GHSA-v9jr-rg53-9pgp"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify versions 3.0.1 through 3.3.3 are vulnerable to an XSS bypass via prototype pollution. When no CUSTOM_ELEMENT_HANDLING is specified, the fallback plain object inherits from Object.prototype; if an attacker has polluted Object.prototype.tagNameCheck and Object.prototype.attributeNameCheck with permissive regexes, DOMPurify allows arbitrary custom elements with event handler attributes through sanitization.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-1321",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-v9jr-rg53-9pgp",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.4.0"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.0.1",
+              "fixed": "3.4.0"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-87xg-pxx2-7hvx",
+          "aliases": [
+            "CVE-2026-47423",
+            "GHSA-87xg-pxx2-7hvx"
+          ],
+          "kind": "vulnerability",
+          "severity": "high",
+          "summary": "DOMPurify XSS via selectedcontent re-clone",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.4.4",
+              "fixed": "3.4.5"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-hpcv-96wg-7vj8",
+          "aliases": [
+            "CVE-2026-49458",
+            "GHSA-hpcv-96wg-7vj8"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify: Cross-realm IN_PLACE sanitization leaves executable markup intact via realm-bound `instanceof` checks",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79",
+            "CWE-501",
+            "CWE-693"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-hpcv-96wg-7vj8"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.6"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-r47g-fvhr-h676",
+          "aliases": [
+            "CVE-2026-49459",
+            "GHSA-r47g-fvhr-h676"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify: IN_PLACE mode preserves attributes of a clobbered root element, allowing XSS via attacker-controlled root DOM",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79",
+            "CWE-693",
+            "CWE-1321"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-r47g-fvhr-h676"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.6"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-76mc-f452-cxcm",
+          "aliases": [
+            "CVE-2026-65902",
+            "GHSA-76mc-f452-cxcm"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify: Hook mutation of `data.allowedTags` / `data.allowedAttributes` permanently pollutes `DEFAULT_ALLOWED_TAGS` / `DEFAULT_ALLOWED_ATTR`",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-501",
+            "CWE-693"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-76mc-f452-cxcm"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-rp9w-3fw7-7cwq",
+          "aliases": [
+            "CVE-2026-49978",
+            "GHSA-rp9w-3fw7-7cwq"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify IN_PLACE Sanitization Bypass via Attached Shadow Root Inside <template>.content",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-rp9w-3fw7-7cwq"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-x4vx-rjvf-j5p4",
+          "aliases": [
+            "CVE-2026-65901",
+            "GHSA-x4vx-rjvf-j5p4"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "DOMPurify: `IN_PLACE` mode trusts attacker-controlled `nodeName` on live non-form nodes, allowing script retention and XSS via attacker-supplied DOM objects",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-x4vx-rjvf-j5p4"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.7"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-gvmj-g25r-r7wr",
+          "aliases": [
+            "CVE-2026-65900",
+            "GHSA-gvmj-g25r-r7wr"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "DOMPurify: SAFE_FOR_TEMPLATES bypass - template expressions survive sanitization inside <template> content when using DOM output modes",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-gvmj-g25r-r7wr"
+          ],
+          "ranges": [
+            {
+              "introduced": "3.0.0",
+              "fixed": "3.4.8"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-vxr8-fq34-vvx9",
+          "aliases": [
+            "CVE-2026-65899",
+            "GHSA-vxr8-fq34-vvx9"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "DOMPurify: Trusted Types policy survives `clearConfig()` and can poison later `RETURN_TRUSTED_TYPE` output",
+          "why": "The upstream source reports a security issue affecting this version. Whether it can be exploited depends on how the affected feature handles untrusted input; check the advisory for details.",
+          "cwe": [
+            "CWE-693"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-vxr8-fq34-vvx9"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.9"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-cmwh-pvxp-8882",
+          "aliases": [
+            "CVE-2026-65898",
+            "GHSA-cmwh-pvxp-8882"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify: Permanent `ALLOWED_ATTR` pollution via `setConfig()` bypassing the hook clone-guard (incomplete fix of the 3.4.7 hook-pollution patch)",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-471",
+            "CWE-665",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-cmwh-pvxp-8882"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.11"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-c2j3-45gr-mqc4",
+          "aliases": [
+            "CVE-2026-66010",
+            "GHSA-c2j3-45gr-mqc4"
+          ],
+          "kind": "vulnerability",
+          "severity": "low",
+          "summary": "DOMPurify: `CUSTOM_ELEMENT_HANDLING` bypasses `afterSanitizeElements` for allowed custom elements.",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-184",
+            "CWE-693",
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-c2j3-45gr-mqc4",
+            "https://github.com/cure53/DOMPurify/pull/1537",
+            "https://github.com/cure53/DOMPurify/commit/a9ca1e537422319a557a9a2aa61f003b23b4a197",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.4.12"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.12"
+            }
+          ]
+        },
+        {
+          "id": "GHSA-55q2-fjhq-7xh7",
+          "aliases": [
+            "CVE-2026-75838",
+            "GHSA-55q2-fjhq-7xh7"
+          ],
+          "kind": "vulnerability",
+          "severity": "medium",
+          "summary": "DOMPurify: IN_PLACE hook removal leaves a detached subtree executable, causing XSS",
+          "why": "If untrusted content reaches the affected feature, an attacker may run JavaScript in a visitor’s browser and act as that visitor.",
+          "cwe": [
+            "CWE-79"
+          ],
+          "applicability": "unspecified",
+          "references": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-55q2-fjhq-7xh7",
+            "https://github.com/cure53/DOMPurify/pull/1557",
+            "https://github.com/cure53/DOMPurify/commit/3067f7746769",
+            "https://github.com/cure53/DOMPurify/releases/tag/3.4.13"
+          ],
+          "ranges": [
+            {
+              "introduced": "0",
+              "fixed": "3.4.13"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

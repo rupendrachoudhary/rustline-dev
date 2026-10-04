@@ -1,0 +1,11 @@
+# Pages for `npm run scan`. One URL per line; lines starting with # are ignored.
+# Hash routes (https://app.example/#/admin) are kept. Add a note after a space: URL  # note
+# Add every template/section you own (city pages, dashboards, login pages...).
+# Only list sites you are authorized to test.
+https://mausam.imd.gov.in/
+https://mausam.imd.gov.in/chandigarh/
+https://metnet.imd.gov.in/
+https://amssdelhi.gov.in/sendata/sendata.txt
+https://amssdelhi.gov.in/sendata/sendata.php
+https://www.yr.no/
+https://internal.imd.gov.in/pages/main.php

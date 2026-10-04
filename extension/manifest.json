@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "rustline.dev",
+  "version": "0.2.0",
+  "description": "Inspect JavaScript libraries and known vulnerability advisories locally, only when you ask.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webRequest",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Inspect with rustline.dev",
+    "default_popup": "popup/popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'self'; base-uri 'none'"
+  }
+}

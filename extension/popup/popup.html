@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rustline.dev</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header class="brand-bar">
+    <div class="brand"><span class="mark" aria-hidden="true">r<span>.</span></span><div><h1>rustline<span>.dev</span></h1><p>Know what’s running.</p></div></div>
+    <span class="local"><span aria-hidden="true"></span>LOCAL ONLY</span>
+  </header>
+  <main>
+    <div class="page-bar"><div><p class="eyebrow">THIS PAGE</p><p id="host">Inspecting active tab…</p></div><button id="rescan" class="icon-button" title="Scan again" aria-label="Scan again" disabled>↻</button></div>
+    <div id="message" class="message" role="status" aria-live="polite">Reading exposed libraries…</div>
+    <section id="results" hidden aria-label="Inspection results">
+      <div class="summary"><div><strong id="total">0</strong><span>library versions</span></div><p id="finding-count"></p></div>
+      <div class="section-title"><h2>JavaScript libraries</h2><span>VERSION / STATUS</span></div>
+      <div id="libraries"></div>
+      <p id="empty" class="empty" hidden>No supported libraries were exposed.<br><span>Bundled modules and libraries without public versions may be invisible to this scan.</span></p>
+      <section class="files" aria-labelledby="files-title">
+        <div class="section-title"><h2 id="files-title">Self-hosted files</h2><span>OPTIONAL</span></div>
+        <p id="files-note"></p>
+        <button id="files" class="text-button" type="button">Check this site’s own script files <span aria-hidden="true">↗</span></button>
+      </section>
+      <section class="headers" aria-labelledby="headers-title">
+        <div class="section-title"><h2 id="headers-title">Response headers</h2><span>2 CHECKS</span></div>
+        <dl id="header-values"></dl>
+        <p id="header-note"></p>
+        <button id="reload" class="text-button" type="button">Reload page to read headers <span aria-hidden="true">↗</span></button>
+      </section>
+      <p class="scope-note">A version match flags a known advisory, not a confirmed exploit. “Current” is relative to the bundled snapshot. <span id="frame-note">Scans the page and the frames Chrome allows it to read.</span></p>
+    </section>
+  </main>
+  <footer><span><span class="footer-dot" aria-hidden="true"></span>No accounts. No telemetry.</span><span id="snapshot">Retire.js snapshot</span></footer>
+</body>
+</html>
