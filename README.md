@@ -94,7 +94,7 @@ Accordingly, rustline.dev:
 - Reads script URLs in an `ISOLATED`-world probe; strips query strings and fragments. The default scan does not download scripts.
 - Reads this site’s own script files only when you press **Check this site’s own script files** (see [Self-hosted files](#self-hosted-files-opt-in)).
 - Registers its header observer after a click has granted access; Chrome rejects `webRequest` registration before an effective host grant exists. The API listener is scoped to the selected tab and hostname. The worker further checks origin and that the selection is still live (a focus change drops it) before selecting `Server` and `X-Powered-By` from a main-document response. URL patterns are **filters, not host permission grants**.
-- Drops its selection when the selected tab/window loses focus or the tab closes. A scan or reload already in progress is cancelled if focus moves to another window (or away from Chrome) and returns no results. Chrome on Linux also reports “no window focused” when the popup itself opens, so that signal is acted on a moment later and only if the popup has closed. Chrome may retain a same-origin `activeTab` grant longer, but rustline.dev does not use it to scan other tabs.
+- Drops its selection when the selected tab/window loses focus or the tab closes. A scan or reload already in progress is cancelled if focus moves to another window (or away from Chrome) and returns no results. Chrome on Linux also reports “no window focused” when the popup itself opens, so that signal is acted on a moment later, and only if the popup has closed and focus has not come back. Chrome may retain a same-origin `activeTab` grant longer, but rustline.dev does not use it to scan other tabs.
 - Keeps one selection and its two header values in `chrome.storage.session`, not in persistent storage. No browsing history or scan results are saved. A document URL is hashed for header correlation, not stored verbatim. Session data is cleared when Chrome restarts.
 
 There are **no `host_permissions`, `<all_urls>`, `tabs`, `webNavigation`, or `webRequestBlocking` permissions**. `storage` supports ephemeral header state across MV3 worker suspension. `scripting` runs the two probes. `webRequest` observes response headers; it never modifies or blocks traffic.
@@ -253,7 +253,7 @@ Each page is loaded once, then reloaded once for headers (`--no-headers` skips t
 
 ## Build and verify a release
 
-Version **0.2.1** adds the opt-in file check and a Linux header fix. The package and extension manifest must have the same version; the builder also verifies lockfile consistency and bundled data.
+Version **0.2.2** adds the opt-in file check and a Linux header fix. The package and extension manifest must have the same version; the builder also verifies lockfile consistency and bundled data.
 
 ```sh
 npm ci --ignore-scripts
@@ -262,7 +262,7 @@ npm run release:verify
 npm run release:test
 ```
 
-Install the pinned Chromium first for `release:test`, or set `CHROME_PATH`. The builder writes `dist/rustline-dev-0.2.1.zip` and its `.sha256` sidecar. Inside the ZIP, `BUILD.json` records the version, a source-content digest, the data snapshot date, and hashes for every packaged source file. Fixed entry ordering, timestamps and modes make repeated builds byte-identical. `release:verify` compares every archived byte with current source; it rejects stale, missing or unexpected files. To verify another path, use `npm run release:verify -- /path/to/archive.zip`.
+Install the pinned Chromium first for `release:test`, or set `CHROME_PATH`. The builder writes `dist/rustline-dev-0.2.2.zip` and its `.sha256` sidecar. Inside the ZIP, `BUILD.json` records the version, a source-content digest, the data snapshot date, and hashes for every packaged source file. Fixed entry ordering, timestamps and modes make repeated builds byte-identical. `release:verify` compares every archived byte with current source; it rejects stale, missing or unexpected files. To verify another path, use `npm run release:verify -- /path/to/archive.zip`.
 
 `release:test` builds twice, verifies reproducibility, extracts to a temporary directory, installs the locked dependencies, and runs data validation, unit tests, Chrome extension checks, and batch checks from the extracted copy. No profiles, reports, node_modules or dist files enter the ZIP. Refresh source and rebuild before sharing; do not reuse an old archive after edits.
 

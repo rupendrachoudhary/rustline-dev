@@ -2,7 +2,7 @@
 
 This guide explains what rustline.dev is, how every part works, why it was built the way it was, and what changed during review. The README is the reference manual; this document explains the reasoning behind it.
 
-Version described: **0.2.1** (2026-10-04). Vulnerability data snapshot: **2026-09-22**.
+Version described: **0.2.2** (2026-10-04). Vulnerability data snapshot: **2026-09-22**.
 
 ---
 
@@ -67,7 +67,7 @@ This is what happens after you click the icon. The code is in `extension/backgro
 
 1. **The popup opens and sends `{type: 'scan', windowId}`.** The popup includes its own window ID because Chrome can report the window as "not focused" while its popup is open (seen on macOS and Linux). Without the ID, scans failed with a false "Focus a Chrome window" error.
 2. **Permission comes from your click.** The manifest requests no website permissions at all, so rustline.dev cannot touch any site until you click. Chrome's `activeTab` feature grants temporary access to the current tab at that moment. This is the core of the privacy promise.
-3. **A scan ticket is created.** If you switch to another Chrome window while the scan is running, `windows.onFocusChanged` cancels the ticket and the scan stops with "You switched windows during inspection". This fixed a review finding (see §9). One special case: when Chrome reports "no window focused", the worker waits 300 ms and acts only if the popup has closed, because Linux sends that signal when the popup itself opens.
+3. **A scan ticket is created.** If you switch to another Chrome window while the scan is running, `windows.onFocusChanged` cancels the ticket and the scan stops with "You switched windows during inspection". This fixed a review finding (see §9). One special case: when Chrome reports "no window focused", the worker waits 300 ms and acts only if the popup has closed and no newer focus event has arrived, because Linux sends that signal when the popup itself opens.
 4. **Frame discovery.** A no-op script runs in every frame Chrome allows. It only learns which documents exist, not what is in them. The first 50 frames, including the top page, are selected. Cross-site frames are normally not accessible and are skipped by Chrome itself.
 5. **Two probes run in the selected frames:**
    - `content/globals.js` runs in the page's own JavaScript world ("MAIN"), because that is the only place page variables like `window.jQuery` are visible. It reads version properties such as `jQuery.fn.jquery` or `Vue.version`. It skips getters, so it never deliberately runs page code, and it returns at most 100 results per frame.
@@ -210,7 +210,7 @@ Things that remain invisible by design:
 | 6 | Frame budget applied too late (0.1.1) | Probes ran in every frame and the extras were discarded afterwards, so frames beyond 50 were still read. | Cheap discovery first, then probes only in the 50 selected documents. | Browser test with 55 frames: only 50 documents probed. |
 | 7 | Release reproducibility (0.1.1) | No lockfile, no CI, and no way to tell whether a shared ZIP matched the source. | Pinned dev dependencies, CI workflow, deterministic ZIP with `BUILD.json` hashes and a `.sha256` file, and `release:test`. | Two builds are byte-identical, and all tests run from the extracted ZIP. |
 | 8 | (Feature) bundled libraries invisible in the popup (0.2.0) | Banner detection existed only in the batch scanner, so the popup showed nothing for sites that bundle their libraries. | Opt-in file check: same-origin files only, fetched from the isolated world, parsed with a vendored Acorn. | Browser test under a strict CSP: default scan finds 0, file check finds jQuery 1.12.4; the other-origin script is never requested. |
-| 9 | Headers lost on Linux (0.2.1) | Opening the popup on Linux makes Chrome report "no window focused". The worker treated that as leaving the page and wiped the selection, including headers captured by the reload. Found on the first CI run. | That signal is acted on 300 ms later, and only if the popup has closed. | The Linux release job failed on the header check before the fix and passes after it. |
+| 9 | Headers lost on Linux (0.2.1) | Opening the popup on Linux makes Chrome report "no window focused". The worker treated that as leaving the page and wiped the selection, including headers captured by the reload. Found on the first CI run. | That signal is acted on 300 ms later, and only if the popup has closed and focus has not returned (0.2.2 added the second condition after one intermittent CI failure). | The Linux release job failed on the header check before the fix and passes after it. |
 
 ---
 
@@ -218,7 +218,7 @@ Things that remain invisible by design:
 
 ```text
 extension/                  ← load this folder in Chrome
-  manifest.json             MV3, version 0.2.1, 4 permissions, strict CSP
+  manifest.json             MV3, version 0.2.2, 4 permissions, strict CSP
   background.js             focus/permission gates, tickets, frame discovery, scan, headers
   content/globals.js        MAIN-world probe (page variables), ≤100 results/frame
   content/scripts.js        ISOLATED-world probe (<script src> URLs), ≤2,000 tags/frame

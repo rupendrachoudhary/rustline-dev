@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 — 2026-10-04
+
+- Fix an intermittent loss of captured headers on Linux left by 0.2.1: the delayed “no window focused” decision was still applied after focus had already returned to the window. A later focus event now supersedes it.
+
 ## 0.2.1 — 2026-10-04
 
 - Fix response headers never appearing on Linux: opening the popup made Chrome report “no window focused”, which cleared the selection and its captured headers. That signal is now acted on only once the popup has closed.
