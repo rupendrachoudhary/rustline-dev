@@ -19,7 +19,7 @@ You need desktop Google Chrome 120 or later. There is nothing to build or instal
 1. Download this repository (**Code → Download ZIP**, then extract it) or clone it:
 
    ```sh
-   git clone git@github.com:rupendrachoudhary/rustline-dev.git
+   git clone https://github.com/rupendrachoudhary/rustline-dev.git
    ```
 
 2. Open `chrome://extensions` in Chrome and turn on **Developer mode** (top-right corner).
