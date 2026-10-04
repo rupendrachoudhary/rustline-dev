@@ -121,15 +121,15 @@ async function scanPage(context, cdp, extensionId, url, withHeaders, database) {
     const response = await page.goto(url, { waitUntil: 'load', timeout: 60000 });
     await page.waitForTimeout(3000); // frames and late scripts
     let popup = await openPopup(cdp, extensionId, page);
-    let scan = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+    let scan = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
     if (withHeaders && scan?.ok) {
-      const reloaded = await popup.evaluate(`chrome.runtime.sendMessage({type:'reload-headers'})`);
+      const reloaded = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'reload-headers',windowId:w.id}))`);
       await popup.close();
       if (reloaded?.ok) {
         await page.waitForLoadState('load', { timeout: 60000 }).catch(() => {});
         await page.waitForTimeout(3000);
         popup = await openPopup(cdp, extensionId, page);
-        scan = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+        scan = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
       }
     }
     await popup.close();

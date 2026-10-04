@@ -131,7 +131,7 @@ try {
   passed('no host grants or scans before user invocation');
 
   let popup = await openPopup(page);
-  let report = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  let report = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(report.ok, true, JSON.stringify(report));
   assert.equal(report.result.rows.length, 6);
   assert.ok(report.result.rows.some(row => row.id === 'jquery' && row.status === 'vulnerable'));
@@ -150,7 +150,7 @@ try {
   await until(() => worker.evaluate(async () => (await chrome.storage.session.get('inspection')).inspection?.headers), 'response headers');
   await popup.detach();
   popup = await openPopup(page);
-  report = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  report = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(report.ok, true, JSON.stringify(report));
   assert.deepEqual(report.result.headers, [{ name:'Server',value:'rustline-test' },{ name:'X-Powered-By',value:'<img src=x onerror=alert(1)>' }]);
   assert.equal(await popup.evaluate('document.querySelectorAll("img").length'), 0);
@@ -180,7 +180,7 @@ try {
   passed('focus change clears selection and does not grant access to the new tab');
 
   popup = await openPopup(second);
-  const empty = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  const empty = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(empty.ok, true, JSON.stringify(empty));
   assert.equal(empty.result.rows.length, 0);
   assert.equal(empty.result.headers, null);
@@ -214,7 +214,7 @@ try {
   await framed.goto(`${origin}/frames`);
   await until(() => framed.evaluate(() => [...document.querySelectorAll('iframe')].every(f => f.contentDocument?.scripts.length === 2000)), 'frame scripts');
   popup = await openPopup(framed);
-  const sixFrames = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  const sixFrames = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(sixFrames.ok, true, JSON.stringify(sixFrames));
   assert.deepEqual(sixFrames.result.rows.map(r => r.id).sort(), ['axios', 'd3', 'dompurify', 'jquery', 'moment', 'vue']);
   assert.equal(sixFrames.result.frames, 7);
@@ -232,7 +232,7 @@ try {
   const budgetPage = await context.newPage();
   await budgetPage.goto(`${origin}/frame-budget`);
   popup = await openPopup(budgetPage);
-  const budget = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  const budget = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(budget.ok, true, JSON.stringify(budget));
   assert.equal(budget.result.frames, 50);
   assert.equal(budget.result.framesSkipped, true);
@@ -246,7 +246,7 @@ try {
   const hosted = await context.newPage();
   await hosted.goto(`${origin}/selfhosted`);
   popup = await openPopup(hosted);
-  const plain = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan'})`);
+  const plain = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan',windowId:w.id}))`);
   assert.equal(plain.ok, true, JSON.stringify(plain));
   assert.deepEqual(plain.result.rows, []);
   assert.equal(plain.result.files, null);
@@ -256,7 +256,7 @@ try {
   const hostedText = await popup.evaluate('document.body.innerText');
   assert.ok(hostedText.includes('jQuery') && hostedText.includes('1.12.4') && hostedText.includes('Vulnerable'), hostedText);
   assert.ok(hostedText.includes('1 script file could not be inspected'), hostedText);
-  const deep = await popup.evaluate(`chrome.runtime.sendMessage({type:'scan-files'})`);
+  const deep = await popup.evaluate(`chrome.windows.getCurrent().then(w => chrome.runtime.sendMessage({type:'scan-files',windowId:w.id}))`);
   assert.equal(deep.ok, true, JSON.stringify(deep));
   assert.deepEqual(deep.result.rows.map(row => `${row.id}@${row.version}:${row.status}`), ['jquery@1.12.4:vulnerable']);
   assert.deepEqual(deep.result.rows[0].evidence, [{ kind: 'banner', detail: `file banner · 127.0.0.1:${server.address().port}/vendor.js` }]);
